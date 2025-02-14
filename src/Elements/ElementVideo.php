@@ -12,7 +12,6 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\Tab;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-
 /**
  * Class ElementVideo
  * @package Dynamic\Elements\Video\Elements
@@ -76,7 +75,7 @@ class ElementVideo extends BaseElement
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
 
             // Video Tab
-            $fields->insertAfter('Main', new Tab('VideoTab', _t(__CLASS__ . '.VideoTab','Video') ));
+            $fields->insertAfter('Main', new Tab('VideoTab', _t(__CLASS__ . '.VideoTab', 'Video')));
 
             // Video internal / self-hosted Video: MP4
             $fields->removeByName('VideoFileMP4');
@@ -103,7 +102,7 @@ class ElementVideo extends BaseElement
             $fields->addFieldToTab('Root.VideoTab', $VideoFileOGV);
 
             // Video: Credits
-            $MediaCredits = new HtmlEditorField('MediaCredits','Video Credits');
+            $MediaCredits = new HtmlEditorField('MediaCredits', 'Video Credits');
             $MediaCredits -> setDescription('optional: weiterer Text, unter dem Video angezeigt');
             $fields -> addFieldTotab('Root.VideoTab', $MediaCredits);
 
