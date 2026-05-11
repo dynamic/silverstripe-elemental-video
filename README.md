@@ -4,8 +4,8 @@ Display a video using native HTML5 video
 
 ## Requirements
 
-* Silverstripe ^4.3
-* Silverstripe Elemental ^4.0
+* Silverstripe ^6
+* Silverstripe Elemental ^6
 
 ## Installation
 
